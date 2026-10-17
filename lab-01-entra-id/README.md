@@ -57,11 +57,15 @@ Simulate a small company IT team in Microsoft Entra ID:
 
 ## 📸 Screenshots
 
-| Users and group | Helpdesk reset | Least privilege test |
-|---|---|---|
-| ![Users](screenshots/01-users.png) | ![Reset](screenshots/02-helpdesk-reset.png) | ![Blocked](screenshots/03-admin-blocked.png) |
+**Omar (Helpdesk Administrator) resets Sara's password: allowed**
 
-> Screenshots have passwords and IDs hidden.
+![Helpdesk reset](screenshots/02-helpdesk-reset.png)
+
+**Omar tries to reset the Global Administrator's password: blocked**
+
+![Admin blocked](screenshots/03-admin-blocked.png)
+
+> Passwords and object IDs are hidden.
 
 ---
 *Part of my 6-month journey to become a Cloud Infrastructure Engineer.*
