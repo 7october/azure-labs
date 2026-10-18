@@ -20,12 +20,12 @@ Simulate a small company IT team in Microsoft Entra ID:
 | User | Omar IT | Department: IT · Entra role: **Helpdesk Administrator** |
 | User | Sara HR | Department: HR |
 | Security group | GRP-IT | Members: Ali IT, Omar IT |
-| Resource group | rg-lab1 | Region: France Central |
+| Resource group | rg-lab1 | Empty resource group used as the access scope |
 | Azure RBAC | Reader on `rg-lab1` | Assigned to **GRP-IT** (group, not users) |
 
 ## 🛠️ Steps
 
-1. **Users**: created 3 cloud users in Entra ID with department and usage location.
+1. **Users**: created 3 cloud users in Entra ID with a department.
 2. **Group**: created the security group `GRP-IT` with assigned membership.
 3. **Azure RBAC**: created `rg-lab1` and assigned the **Reader** role to `GRP-IT` at resource group scope.
 4. **Entra role**: assigned **Helpdesk Administrator** to Omar IT.
@@ -57,15 +57,31 @@ Simulate a small company IT team in Microsoft Entra ID:
 
 ## 📸 Screenshots
 
-**Omar (Helpdesk Administrator) resets Sara's password: allowed**
+> Passwords and object IDs are hidden.
+
+**1. Security group GRP-IT (assigned membership, cloud)**
+
+![GRP-IT overview](screenshots/07-grp-it-overview.png)
+
+**2. GRP-IT members: Ali IT and Omar IT**
+
+![GRP-IT members](screenshots/06-grp-it-members.png)
+
+**3. Azure RBAC: GRP-IT has the Reader role on rg-lab1 (scope: this resource)**
+
+![Reader on rg-lab1](screenshots/04-rbac-reader-rg-lab1.png)
+
+**4. Entra role: Omar IT is Helpdesk Administrator (scope: directory)**
+
+![Helpdesk Administrator](screenshots/05-helpdesk-role.png)
+
+**5. Omar resets Sara's password: allowed**
 
 ![Helpdesk reset](screenshots/02-helpdesk-reset.png)
 
-**Omar tries to reset the Global Administrator's password: blocked**
+**6. Omar tries to reset the Global Administrator's password: blocked**
 
 ![Admin blocked](screenshots/03-admin-blocked.png)
-
-> Passwords and object IDs are hidden.
 
 ---
 *Part of my 6-month journey to become a Cloud Infrastructure Engineer.*
