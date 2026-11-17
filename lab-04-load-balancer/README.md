@@ -3,6 +3,8 @@
 > AZ-104 preparation · Domain: **Implement and manage virtual networking** / **Deploy and manage compute**
 > Environment: Azure for Students subscription · France Central
 
+📘 **Study notes:** [Cheat sheet: steps and rules for each tool](CHEATSHEET.md)
+
 ## 🎯 Goal
 
 Make a small website **highly available**: two web servers behind a public **Standard Load Balancer**, so the site stays up when one server fails.
